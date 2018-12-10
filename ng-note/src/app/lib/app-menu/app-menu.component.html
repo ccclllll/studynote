@@ -1,0 +1,13 @@
+<div class="br-setting-menu-wrapper">
+  <div *ngFor="let item of items" [style.textIndent]="item?.indent + 'px'">
+    <a class="br-setting-menu-item" [ngClass]="{'isActive':item.active}" [routerLink]="item.routerLink"
+       (click)="item.command();isActive(items,item)">
+      <i class="br-menu-icon iconfont" [ngClass]="'iconfont-'+item?.icon"></i>
+      <span class="br-setting-menu-contentText">{{item.title}}</span>
+      <span *ngIf="item.items" [ngClass]="{'up-arrow': item.active, 'down-arrow': !item.active}"></span>
+    </a>
+    <ng-template [ngIf]="item.items && item.active">
+      <app-menu [items]= "item.items" (activeRouter)="alreadyActiveRouter($event)"></app-menu>
+    </ng-template>
+  </div>
+</div>

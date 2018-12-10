@@ -1,0 +1,39 @@
+:host .br-setting-menu-wrapper {
+  font: 14px MirscorftYaHei; }
+:host .br-setting-menu-item {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  color: #333333;
+  text-decoration: none; }
+:host .br-menu-icon {
+  margin: 0 10px 0 0; }
+:host .br-setting-menu-item:hover {
+  cursor: pointer;
+  color: #f75223 !important;
+  background: #efefef; }
+:host .br-setting-menu-contentText {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+:host .isActive {
+  color: #f75223 !important;
+  background: #efefef;
+  box-shadow: 2px 0 0 0 #f75223 inset; }
+
+.down-arrow {
+  width: 0.5em;
+  height: 0.5em;
+  border: solid #8c8c8c;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg); }
+
+.up-arrow {
+  width: 0.5em;
+  height: 0.5em;
+  border: solid #f75223;
+  border-width: 1px 0 0 1px;
+  transform: rotate(45deg); }
+
+/*# sourceMappingURL=app-menu.component.css.map */
